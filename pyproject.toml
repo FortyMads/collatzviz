@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "collatzviz"
+version = "0.1.0"
+description = "Predictive graphs and analysis for the Collatz conjecture"
+readme = "README.md"
+authors = [{ name = "FortyMads" }]
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.7",
+  "networkx>=3.1",
+  "numpy>=1.25",
+  "pandas>=2.0",
+  "scipy>=1.10",
+]
+
+[project.scripts]
+collatzviz = "collatzviz.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["collatzviz*"]
